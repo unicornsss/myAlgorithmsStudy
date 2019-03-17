@@ -13,6 +13,7 @@ public class M01twosum {
             System.out.println(i);
         }
     }
+    //采用双重for循环，因为题目里已知是两个
     public int[] twoSum(int[] nums, int target) {
         int res[] = new int[2];
         for (int i = 0; i < nums.length; i++) {
@@ -26,3 +27,4 @@ public class M01twosum {
         return res;
     }
 }
+//http://www.cnblogs.com/grandyang/p/4130379.html 另外的解法
