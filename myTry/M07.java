@@ -38,29 +38,4 @@ public class M07 {
             }
             return res.intValue();
     }
-
-    public int reverse2(int x) {
-        if(x==Integer.MIN_VALUE)
-            return Integer.MIN_VALUE;
-        int num = Math.abs(x);
-        int res = 0;
-        while(num!=0){
-            if(res>(Integer.MAX_VALUE-num%10)/10)//非常巧妙的判断了越界问题
-                return x>0?Integer.MAX_VALUE:Integer.MIN_VALUE;
-            res = res*10+num%10;
-            num /= 10;
-        }
-        return x>0?res:-res;
-    }
-    public int reverse3(int x) {
-        int rev = 0;
-        while (x != 0) {
-            int pop = x % 10;
-            x /= 10;
-            if (rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
-            if (rev < Integer.MIN_VALUE / 10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
-            rev = rev * 10 + pop;
-        }
-        return rev;
-    }
 }
