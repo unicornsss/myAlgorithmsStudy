@@ -9,6 +9,7 @@ public class M26 {
 //    这个目前是个结束不了的循环， 没考虑好怎么结束  重点   i--
 //    因为没有找到能够结束循环的方式，所以只能先用一个循环判断出剩下的个数，然后将数组处理过足够的次数
     public int removeDuplicates(int[] nums) {
+        if(nums ==  null) return 0;
         int i = 0;
         int count = nums.length;
         int m = 0;
@@ -19,7 +20,7 @@ public class M26 {
                 count--;
             }
         }
-        while(m < nums.length ){
+        while(m < nums.length -1 ){
             if(nums[i] == nums[i+1]){
                 for (int j = i+1; j < nums.length -1; j++) {
                     nums[j] = nums[j+1];
