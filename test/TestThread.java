@@ -12,7 +12,6 @@ public class TestThread {
         final MyData data = new MyData();
         for (int i = 0; i < 10; i++) {
             new Thread(new Runnable() {
-
                 public void run() {
                     data.add();
 
